@@ -16,7 +16,24 @@
       top: 0;
   }
 }
+@keyframes fadeOutAnimation {
+  0% {
+    top: 0;
+  }
+  
+  100% {
+    top: -71px;
+  }
+}
 .hide{
+  position: relative;
+  top: -71px;
+  transition-duration: 3s;
+  transition-delay: 3s;
+  animation: fadeOutAnimation 1s;
+  z-index: -1;
+}
+.show{
   position: relative;
   transition-duration: 3s;
   transition-delay: 3s;
