@@ -6,7 +6,7 @@ const ContextContainer = createContext();
 export const ContextProvider = ({ children }) => {
   const [products, setProducts] = useState(Products);
   const [cardAmount, setCardAmount] = useState(0);
-  const [cardQuantity, setCardQuantity] = useState(0);
+  const [cardQuantity, setCardQuantity] = useState(1);
   const [clear, setClear] = useState(true);
   const [TotalCard, setTotalcard] = useState(false);
   const [inCard, setInCard] = useState([]);

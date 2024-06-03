@@ -59,8 +59,10 @@ const Card = () => {
             a = cardAmount - +priceAfterDiscount;
             setCardAmount(a);
           } else {
+            if(cardQuantity - 1==0){
+              setTotalcard(false)
+            }
             setAddcard(!addCard);
-            setTotalcard(false)
             setQuantity(quantity - 1);
             setCardQuantity(cardQuantity - 1);
             a = cardAmount - +priceAfterDiscount;
@@ -74,9 +76,7 @@ const Card = () => {
             setQuantity(quantity + 1);
             setCardQuantity(cardQuantity + 1);
             setCardAmount(cardAmount + +subTotal);
-            console.log(a);
             a = cardAmount + +priceAfterDiscount;
-            console.log(a);
             setCardAmount(a);
           }
         };
@@ -99,7 +99,7 @@ const Card = () => {
               <div className="row g-0 ">
                 <div className="col-md-5 d-flex justify-content-center align-items-center">
                   <img
-                    src={product.images} //[1] ? product.images[1] : product.images[0]
+                    src={product.images} 
                     className="img-fluid product-img"
                     alt="..."
                     style={{ borderRadius: "30px" }}
